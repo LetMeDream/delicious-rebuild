@@ -8,9 +8,6 @@ const Popular = ({
 }:{
   popularRecipes: Recipes
 }) => {
-  console.log(popularRecipes)
-  
-
 
   return (
     <section className=' my-2 w-[80%] flex flex-col items-center'>
