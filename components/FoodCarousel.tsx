@@ -1,9 +1,8 @@
-import React from 'react'
+import React, { useLayoutEffect } from 'react'
 import { Recipes } from '@/app/lib/definitions'
 import { Carousel, CarouselContent, CarouselNext, CarouselPrevious, CarouselItem } from './ui/carousel'
 import { Card, CardContent, CardTitle } from './ui/card'
 import Image from 'next/image'
-
 
 const FoodCarousel = ({
   recipes
@@ -16,26 +15,28 @@ const FoodCarousel = ({
           align: "start",
           loop: true
         }}
-        className="w-full "
+        className="w-full flex justify-center"
       >
-        <CarouselContent>
+        <CarouselContent
+          id='content'
+          className=''
+        >
           {recipes.map((recipe, index) => (
-            <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/4">
-              <div className="p-1">
-                <Card className=''>
-                  <CardTitle className='h-[40px]'>
+            <CarouselItem id='item' key={index} className=" md:basis-2/6 basis-full min-w-0 w-[80%] shrink-0">
+                <Card className='flex flex-col'>
+                  <CardTitle className=' h-[40px]'>
                     <span className="text-sm text-center font-semibold">{recipe.title}</span>
                   </CardTitle>
-                  <CardContent className="flex aspect-squae items-center justify-center p-6">
+                  <CardContent className="flex h-[280px] p-5 py-10">
                     <Image
+                      className='rounded-md'
                       src={recipe.image}
-                      width={500}
-                      height={500}
-                      alt="Picture of the author"
+                      width={720}
+                      height={720}
+                      alt={recipe.title}
                     />
                   </CardContent>
                 </Card>
-              </div>
             </CarouselItem>
           ))}
         </CarouselContent>
