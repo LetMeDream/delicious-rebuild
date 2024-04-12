@@ -7,9 +7,9 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'spoonacular.com',
+        hostname: '**.spoonacular.com',
         port: '',
-        pathname: '/recipeImages/*'
+        pathname: '/**/**'
       }
     ]
   }
