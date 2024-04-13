@@ -18,7 +18,7 @@ const links = [
 ];
 
   return (
-    <nav className='  items-center m-2 mb-0 cursor-pointer bg-[#d0b5a6] group rounded-t-xl overflow-hidden p-2'>
+    <nav className=' self-center mb-4 mt-2 cursor-pointer bg-[#d0b5a6] group rounded-t-xl overflow-hidden p-2'>
       <ul className='flex'>
 
         {links.map((link, i) => {
