@@ -9,7 +9,7 @@ import { Card, CardContent, CardTitle } from './ui/card'
 
 export const SkeletonCarousel = () => {
   return (
-    <section className=' my-2 w-full flex flex-col items-center'>
+    <section className=' w-full flex flex-col items-center'>
         <div className="flex w-full justify-center">
             <div id='item' className=" md:basis-2/6 basis-full min-w-0 w-[80%] pr-2 shrink-0">
                 <SkeletonCard />
@@ -44,12 +44,12 @@ export const SkeletonCard = () => {
 
 export const HomepageSkeleton = () => {
 	return (
-		<main className=" w-[80vw] m-auto flex flex-col gap-2 items-center justify-center">
+		<main className=" w-[80vw] mx-auto flex flex-col gap-2 items-center justify-center">
 			<div className='mt-2 self-start'>Some veggetarian options:</div>
 			<SkeletonCarousel />
 			<div className='mt-2 self-start'>Our popular dishes:</div>
 			<SkeletonCarousel />
-    </main>
+        </main>
 
 	)
 }
