@@ -1,5 +1,6 @@
 import React from 'react'
 import { Separator } from '../ui/separator';
+import Link from 'next/link';
 
 const BurguerMenu = () => {
 
@@ -29,11 +30,13 @@ const links = [
               key={link.name}
               className='flex'
             >
-              <li
-                className='hover:text-white p-2 px-4'
-                >
-                {link.name}
-              </li>
+               <Link 
+                    href={link.href}
+                    className='hover:text-white p-2 px-4'
+                  >
+                    {link.name}
+                  </Link>
+                
               {
                 !isLastItem
                 ? (
