@@ -17,8 +17,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="min-h-[100vh] pt-4">
-      <body className={inter.className + ' bg-[#f3e5d8] flex flex-col w-[90vw] m-auto'}>
+    <html lang="en" className="min-h-[100vh] h-[100vh] pt-4">
+      <body className={inter.className + ' bg-[#f3e5d8] flex flex-col w-[90vw] m-auto h-full'}>
           <BurguerMenu />
           <Search />
           {children}
