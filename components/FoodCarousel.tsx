@@ -21,7 +21,7 @@ const FoodCarousel = ({
           id='content'
           className=''
         >
-          {recipes.map((recipe, index) => (
+          {recipes?.map((recipe, index) => (
             <CarouselItem id='item' key={index} className=" md:basis-2/6 basis-full min-w-0 w-[80%] shrink-0">
                 <Card className='flex flex-col'>
                   <CardTitle className=' h-[40px]'>
