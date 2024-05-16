@@ -2,7 +2,7 @@ import React from 'react'
 import Italian from '@/components/Italian'
 
 const ItalianPage = async () => {
-  const italian = await fetch(`https://api.spoonacular.com/recipes/random?number=8&cuisine=italian&apiKey=${process.env.API_KEY}`)
+  const italian = await fetch(`https://api.spoonacular.com/recipes/random?number=12&cuisine=italian&apiKey=${process.env.API_KEY}`)
   const italianJson = await italian.json()
   const italianRecipes = italianJson.recipes
 

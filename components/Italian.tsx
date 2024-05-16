@@ -1,16 +1,20 @@
-import React from 'react'
+'use client'
+
 import { Recipes } from '@/app/lib/definitions'
-import FoodCarousel from './FoodCarousel'
+import AceternityGrid from './AceternityGrid'
 
 const Italian = ({
     recipes
 }:{
     recipes: Recipes
 }) => {
+
   return (
-    <section className=' my-2 w-[80%] flex flex-col items-center'>
+    <section className=' my-2 w-full flex flex-col items-center'>
         <div className='my-2 self-start'>Some Italian options:</div>
-        <FoodCarousel recipes={recipes}/>
+        <AceternityGrid recipes={recipes} />
+        
+        
     </section>
   )
 }
