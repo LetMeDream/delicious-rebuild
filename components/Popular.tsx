@@ -11,7 +11,7 @@ const Popular = ({
 
   return (
     <section className=' my-2 w-[80%] flex flex-col items-center'>
-      <div className='my-2 self-start'>Our popular dishes:</div>
+      <div className='my-2 self-center text-2xl font-semibold text-[hsl(21,31%,30%)]'>Our popular dishes:</div>
 
       <FoodCarousel 
         recipes={popularRecipes}
