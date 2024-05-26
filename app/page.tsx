@@ -13,7 +13,7 @@ export default async function Home(
     }
   }
 ) {
-  await new Promise((res) => { setTimeout(res, 1000) })
+  // await new Promise((res) => { setTimeout(res, 1000) })
   /* Popular */
   const popular = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=${process.env.API_KEY}&number=8`);
   const popularData = await popular.json()
@@ -32,15 +32,15 @@ export default async function Home(
   const resultRecipes = resultsData.results
 
   return (
-    <main className=" flex flex-col gap-2 items-center justify-center">
+    <main className=" flex flex-col gap-2 items-center justify-center max-w-[80%] self-center ">
   
       {/* If there's no search */}
       {
         !searchParams?.search?.length ?
         (
           <>
-            <Veggie veggieRecipes={veggieRecipes} />
             <Popular popularRecipes={popularRecipes} />
+            <Veggie veggieRecipes={veggieRecipes} />
           </>
         ) : null       
       }
