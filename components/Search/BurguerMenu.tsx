@@ -19,7 +19,7 @@ const links = [
 ];
 
   return (
-    <nav className=' self-center mb-4 mt-2 cursor-pointer bg-[#d0b5a6] group rounded-t-xl overflow-hidden p-2'>
+    <nav className=' self-center min-h-[50px] mb-4 mt-2 cursor-pointer bg-[#d0b5a6] group rounded-t-xl overflow-hidden p-2'>
       <ul className='flex'>
 
         {links.map((link, i) => {
