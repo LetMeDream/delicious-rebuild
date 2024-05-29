@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import BurguerMenu from "@/components/Search/BurguerMenu";
 import Search from "@/components/Search/Search";
+import { Suspense } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,11 +19,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="min-h-[100vh] h-[100vh] pt-4">
-      <body className={inter.className + ' bg-[#f3e5d8] flex flex-col w-[90vw] m-auto h-full'}>
-          <BurguerMenu />
-          <Search />
-          {children}
-      </body>
+      <Suspense>
+        <body className={inter.className + ' bg-[#f3e5d8] flex flex-col w-[90vw] m-auto h-full'}>
+            <BurguerMenu />
+            <Search />
+            {children}
+        </body>
+      </Suspense>
     </html>
   );
 }
