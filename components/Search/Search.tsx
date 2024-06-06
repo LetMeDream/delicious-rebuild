@@ -31,7 +31,7 @@ const Search = () => {
     <section className='w-[80%] mx-auto flex flex-col items-center'>
       <Input
         placeholder='Look for your dessert'
-        className=' bg-slate h-10 w-[80%]'
+        className=' bg-slate h-10 w-100%'
         onKeyUp={debouncedChange}
         defaultValue={searchParams.get('search')?.toString()}
       />
