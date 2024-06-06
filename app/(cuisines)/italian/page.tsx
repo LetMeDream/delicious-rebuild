@@ -1,5 +1,5 @@
 import React from 'react'
-import Italian from '@/components/Italian'
+import GridCountry from '@/components/GridCountry'
 
 const ItalianPage = async () => {
   const italian = await fetch(`https://api.spoonacular.com/recipes/random?number=6&cuisine=italian&apiKey=${process.env.API_KEY}`)
@@ -8,7 +8,10 @@ const ItalianPage = async () => {
 
   return (
     <div className=' flex flex-col gap-2 items-center justify-center '>
-      <Italian recipes={italianRecipes} />
+      <GridCountry 
+        recipes={italianRecipes}
+        description={'Some Italian Options:'}
+      />
     </div>
   )
 }

@@ -1,5 +1,6 @@
 import React from 'react'
-import American from '@/components/American'
+import GridCountry from '@/components/GridCountry'
+import { Card } from '@/components/ui/card'
 
 const ItalianPage = async () => {
   const american = await fetch(`https://api.spoonacular.com/recipes/random?number=6&cuisine=american&apiKey=${process.env.API_KEY}`)
@@ -7,9 +8,12 @@ const ItalianPage = async () => {
   const americanRecipes = americanJson.recipes
 
   return (
-    <div className=' flex flex-col gap-2 items-center justify-center '>
-      <American recipes={americanRecipes} />
-    </div>
+    <Card className=' mx-auto max-w-[80%] w-[80%] flex flex-col gap-2 bg-[#d0b5a6] border-transparent mt-4 shadow-md'>
+      <GridCountry 
+        recipes={americanRecipes}
+        description={'Some American Options:'}
+      />
+    </Card>
   )
 }
 
